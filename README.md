@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+RELATIVES:
+
+Rent a relative! Ever wanted an older brother? Is your uncle not creepy enough? Miss your grandma?
+Relatives has the answer to your problems! Browse through hundreds of relatives, or put your spare one up for rent.
+RELATIVES
