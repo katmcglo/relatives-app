@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+$light-orange: #FAF0CA;
+$light-grey: #CCE0CE;
+
+body {
+ background: $light-orange;
+}
+
+.nav-elements {
+  background: $light-grey;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+#homepage-box {
+  height: 300px;
+}
