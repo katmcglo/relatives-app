@@ -1,9 +1,9 @@
 
 <h1>Create New Booking</h1>
 
-<%= simple_form_for(@family_members, @booking) do |f|%>
+<%= simple_form_for [@family_member, @booking] do |f|%>
 <%= f.input :start_date %>
 <%= f.input :end_date %>
-<%#= f.accessor %>
+<%= f.association :family_member %>
 <%= f.submit %>
 <% end  %>

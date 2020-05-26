@@ -25,4 +25,3 @@ fritz = User.create(email: "fritz@hawaii.com", password: "123456")
   family_member.save!
 end
 puts 'Finished!'
->>>>>>> 7c31d4785cdd22d805f65dc8f6e367694adbe49a
