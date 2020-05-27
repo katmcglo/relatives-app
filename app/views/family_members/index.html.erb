@@ -1,4 +1,17 @@
-<h1>Hello there</h1>
-<% @family_members.each do |family_member| %>
-  <%= family_member.name %>
-<% end %>
+<h1>Relatives</h1>
+
+<div class="cards">
+  <% @family_members.each do |family_member| %>
+    <%= link_to family_member_path(family_member.id) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= family_member.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+  <your html here>
+
+
+

@@ -1,8 +1,9 @@
-<h1>Your chosen family member</h2>
+<h1><%= @family_member.name %></h2>
 
-<div class="container">
-  <div class="card">
-    <h3><%= @family_member.name %></h3>
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2><%= @family_member.name %></h2>
     <p><%= @family_member.age %></p>
     <p><%= @family_member.kinship %></p>
     <p><%= @family_member.description %></p>
