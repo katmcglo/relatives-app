@@ -7,7 +7,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @family_member = FamilyMember.find(params[:family_member_id])
     @booking.user = current_user
+    @booking.family_member = @family_member
     authorize @booking
     if @booking.save
       redirect_to booking_path(@booking)
