@@ -1,17 +1,19 @@
 <div class="container d-flex align-items-center justify-content-center" id="homepage-box">
   <div class="form-group row">
   <%= form_tag family_members_path, method: :get do %>
+  <%= label :kinship, 'Find' %>
   <%= select_tag :kinship, raw(
-    "<option>Grandmas</option>
-      <option>Grandpas</option>
-      <option>Uncles</option>
-      <option>Aunts</option>
-      <option>Cousins</option>
-      <option>Brothers</option>
+    "<option>Grandma</option>
+      <option>Grandpa</option>
+      <option>Uncle</option>
+      <option>Aunt</option>
+      <option>Cousin</option>
+      <option>Brother</option>
       <option>Sister</option>
-      <option>Fathers</option>
-      <option>Mothers</option>"
+      <option>Father</option>
+      <option>Mother</option>"
     ) %>
+    <%= label :query, 'in' %>
     <%= text_field_tag :query %>
     <%= submit_tag("Search!") %>
   <% end %>
