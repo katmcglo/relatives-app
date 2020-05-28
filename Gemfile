@@ -37,6 +37,9 @@ gem 'simple_form'
 gem 'faker'
 
 # Cloudinary
+gem 'cloudinary', '~> 1.12.0'
+
+# Cloudinary Protect
 gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
