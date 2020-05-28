@@ -5,5 +5,7 @@ class FamilyMembersController < ApplicationController
 
   def show
     @family_member = FamilyMember.find(params[:id])
+    @booking = Booking.new
+    authorize @booking
   end
 end

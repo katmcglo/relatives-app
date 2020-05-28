@@ -1,26 +1,25 @@
-<h1><%= @family_member.name %></h1>
-
-<div class="card-product mt-10">
-  <img src="https://frontiersinblog.files.wordpress.com/2020/04/frontiers-psychology-free-from-dance-alternative-interaction-grandchildren-grandparents.jpg?w=1024" />
-  <div class="card-product-infos">
-    <h2><%= @family_member.name %></h2>
-    <p><%= @family_member.age %></p>
-    <p><%= @family_member.kinship %></p>
-    <p><%= @family_member.description %></p>
+<div class="container d-flex bg-white booking-container" style="justify-content: space-between">
+  <div class="card booking-card" style="width: 30rem;">
+    <img class="card-img-top" src="https://frontiersinblog.files.wordpress.com/2020/04/frontiers-psychology-free-from-dance-alternative-interaction-grandchildren-grandparents.jpg?w=1024" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"><h2><%= @family_member.name %></h2>
+        <p><%= @family_member.age %></p>
+        <p><%= @family_member.kinship %></p>
+        <p><%= @family_member.description %></p></p>
     </div>
-</div>
+  </div>
 
-<div class="card-product mt-10">
-  <div class="card-product-infos">
-    <p>ratings go here</p>
-    <div>
-    <i class="fas fa-star" style="color: #F9C659"></i>
-    <i class="fas fa-star" style="color: #F9C659"></i>
-    <i class="fas fa-star" style="color: #F9C659"></i>
-    <i class="fas fa-star" style="color: #F9C659"></i>
-    <i class="fas fa-star" style="color: #F9C659"></i>
+  <div class="new-booking-wrap d-flex" style="align-items: center;">
+    <div class="new-booking column">
+      <h1>Create New Booking</h1>
+
+      <%= simple_form_for [@family_member, @booking] do |f|%>
+      <%#= f.association :family_member %>
+      <%= f.input :start_date, class: "booking-inputs"%>
+      <%= f.input :end_date, class: "booking-inputs"%>
+      <%= f.submit class: "btn btn-ghost"%>
+      <% end %>
     </div>
   </div>
 </div>
 
-<%= link_to "Book Relative", new_family_member_booking_path(@family_member), class: "btn btn-info mt-3 ml-3"  %>
