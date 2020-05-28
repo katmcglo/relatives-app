@@ -1,6 +1,21 @@
 <div class="container d-flex align-items-center justify-content-center" id="homepage-box">
   <div class="form-group row">
-  <form class="form-inline" action="/family_members">
+  <%= form_tag family_members_path, method: :get do %>
+  <%= select_tag :kinship, raw(
+    "<option>Grandmas</option>
+      <option>Grandpas</option>
+      <option>Uncles</option>
+      <option>Aunts</option>
+      <option>Cousins</option>
+      <option>Brothers</option>
+      <option>Sister</option>
+      <option>Fathers</option>
+      <option>Mothers</option>"
+    ) %>
+    <%= text_field_tag :query %>
+    <%= submit_tag("Search!") %>
+  <% end %>
+  <%# <% <form class="form-inline" action="/family_members">
     <label for="relatives">Find </label>
     <select class="form-control" id="relatives">
       <option>Grandmas</option>
@@ -10,11 +25,13 @@
       <option>Cousins</option>
       <option>Brothers</option>
       <option>Sisters</option>
+      Fathers 
+      Mothers
     </select>
     <label for>near</label>
     <input type="text" class="form-control" id="city" placeholder="Berlin" required>
     <button type="submit" class="btn btn-primary">Search!</button>
-  </form>
+  </form> %> 
 </div>
 
 </div>
