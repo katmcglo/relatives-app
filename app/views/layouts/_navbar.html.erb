@@ -2,7 +2,9 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.jpg", class: "avatar avatar-crop-square" %>
   <% end %>
-  <h3 class="nav-text">RELATIVES</h3>
+
+  <h3 class="nav-text align-middle justify-content">RELATIVES</h3>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,6 +19,7 @@
           <%= link_to "My relatives", "#", class: "dropdown-item" %>
           <% if current_user %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to "Create relative", "/family_members/new", class: "dropdown-item" %>
           <% else  %>
           <%= link_to "Log in", user_session_path, method: :post, class: "dropdown-item" %>
           <% end  %>

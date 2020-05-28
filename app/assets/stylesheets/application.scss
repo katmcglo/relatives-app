@@ -10,4 +10,16 @@
 
 // Your CSS partials
 @import "components/index";
+
+// Your CSS pages (rails does that)
+@import "pages/home";
 @import "pages/index";
+@import "family_members/show";
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3{
+  font-family: $headers-font;
+}

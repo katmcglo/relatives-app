@@ -1,13 +1,14 @@
 // Specific CSS for your home-page
 $light-orange: #FAF0CA;
-$light-grey: #CCE0CE;
+$light-green: #1B5954;
+$off-white: #FEFEFE;
 
 body {
- background: $light-orange;
+ background: white;
 }
 
 .nav-elements {
-  background: $light-grey;
+  background: $light-green;
 }
 
 .footer {
@@ -26,4 +27,23 @@ body {
 
 #featured-relatives {
   width: 100%;
+}
+
+.btn-primary {
+  background-color: #25817B;
+  border-radius: 10px;
+  &:hover {
+    background-color: #1B5954;
+  }
+}
+
+.form-control {
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0.5px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
