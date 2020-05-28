@@ -35,6 +35,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'faker'
+gem "pg_search"
 
 # Cloudinary
 gem 'cloudinary', '~> 1.12.0'
