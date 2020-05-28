@@ -19,6 +19,7 @@
           <%= link_to "My relatives", "#", class: "dropdown-item" %>
           <% if current_user %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to "Create relative", "/family_members/new", class: "dropdown-item" %>
           <% else  %>
           <%= link_to "Log in", user_session_path, method: :post, class: "dropdown-item" %>
           <% end  %>
