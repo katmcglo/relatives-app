@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   def new
     @family_member = FamilyMember.find(params[:family_member_id])
     @booking = Booking.new
-    authorize @booking
+    # authorize @booking
   end
 
   def create
@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @family_member = FamilyMember.find(params[:family_member_id])
     @booking.user = current_user
     @booking.family_member = @family_member
-    authorize @booking
+    # authorize @booking
     if @booking.save
       redirect_to booking_path(@booking)
     else
