@@ -1,0 +1,10 @@
+<h1>Edit a Family Member</h1>
+
+<%= simple_form_for @family_member do |form| %>
+ <%= form.input :name, label: @family_member.name %>
+ <%= form.input :age, label: @family_member.age  %>
+ <%= form.input :kinship, :collection => %w[Grandma Grandpa Uncle Aunt Cousin Brother Sister Father Mother], label: @family_member.kinship  %>
+ <%= form.input :description, label: @family_member.description  %>
+ <%= form.input :image, as: :file, label: @family_member.image %>
+ <%= form.button :submit, class: "btn btn-ghost"%>
+<% end %>
