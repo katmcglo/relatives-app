@@ -12,8 +12,11 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2020_05_28_145640) do
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ActiveRecord::Schema.define(version: 2020_05_29_095517) do
