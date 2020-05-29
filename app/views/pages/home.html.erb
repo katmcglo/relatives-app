@@ -3,38 +3,20 @@
   <%= form_tag family_members_path, method: :get do %>
   <%= label :kinship, 'Find' %>
   <%= select_tag :kinship, raw(
-    "<option>Grandma</option>
-      <option>Grandpa</option>
-      <option>Uncle</option>
-      <option>Aunt</option>
-      <option>Cousin</option>
-      <option>Brother</option>
-      <option>Sister</option>
-      <option>Father</option>
-      <option>Mother</option>"
+    "<option value='Grandma'>Grandmas</option>
+      <option value='Grandpa'>Grandpas</option>
+      <option value='Uncle'>Uncles</option>
+      <option value='Aunt'>Aunts</option>
+      <option value='Cousin'>Cousins</option>
+      <option value='Brother'>Brothers</option>
+      <option value='Sister'>Sisters</option>
+      <option value='Father'>Fathers</option>
+      <option value='Mother'>Mothers</option>"
     ) %>
     <%= label :query, 'in' %>
     <%= text_field_tag :query %>
     <%= submit_tag("Search!") %>
   <% end %>
-  <%# <% <form class="form-inline" action="/family_members">
-    <label for="relatives">Find </label>
-    <select class="form-control" id="relatives">
-      <option>Relatives</option>
-      <option>Grandmas</option>
-      <option>Grandpas</option>
-      <option>Uncles</option>
-      <option>Aunts</option>
-      <option>Cousins</option>
-      <option>Brothers</option>
-      <option>Sisters</option>
-      Fathers 
-      Mothers
-    </select>
-    <label for>near</label>
-    <input type="text" class="form-control" id="city" placeholder="city" required>
-    <button type="submit" class="btn btn-primary">Search!</button>
-  </form> %> 
 </div>
 
 </div>
