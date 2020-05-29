@@ -1,12 +1,17 @@
-<h1>Add a Family Member</h1>
+<div class="container align-text new-booking-wrap d-flex" style="align-items: center;">
+  <div class="new-booking column">
+    <h1>Add a Family Member</h1>
+    
+    <%= simple_form_for @family_member do |form| %>
 
-<%= simple_form_for @family_member do |form| %>
+     <%= form.input :name, label: "Name" %>
+     <%= form.input :age, label: "Age" %>
+     <%= form.input :kinship, :collection => %w[Grandma Grandpa Uncle Aunt Cousin Brother Sister Father Mother], label: "Kinship"  %>
+     <%= form.input :city, label: "City" %>
+     <%= form.input :description, label: "Tell us about you!" %>
+     <%= form.input :image, as: :file, label: "Image of you:" %>
+     <%= form.button :submit %>
+    <% end %>
+  </div>
+</div>
 
- <%= form.input :name, label: "Name" %>
- <%= form.input :age, label: "Age" %>
- <%= form.input :kinship, :collection => %w[Grandma Grandpa Uncle Aunt Cousin Brother Sister Father Mother], label: "Kinship"  %>
- <%= form.input :city, label: "City" %>
- <%= form.input :description, label: "Tell us about you!" %>
- <%= form.input :image, as: :file, label: "Image of you:" %>
- <%= form.button :submit, class: "btn btn-ghost"%>
-<% end %>
