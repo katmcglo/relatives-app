@@ -3,13 +3,17 @@ class FamilyMemberPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def create?
-      true
-    end
+  def new?
+    return true
+  end
 
-    def show?
-      true
-    end
+  def create?
+    true
+  end
+
+  def show?
+    true
   end
 end
