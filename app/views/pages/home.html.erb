@@ -6,49 +6,34 @@
       <p>Brünhilde's Sauerkraut is unbeatable!</p>
     </div>
   </div>
-  
-<div class="container d-flex align-items-center justify-content-center" id="homepage-box">
+
+
+<div class="search-bar d-flex align-items-center justify-content-center" id="homepage-box" style="z-index: 1; margin-left: 60px;">
+
   <div class="form-group row">
-  <%= form_tag family_members_path, method: :get do %>
-  <%= label :kinship, 'Find' %>
-  <%= select_tag :kinship, raw(
-    "<option>Grandma</option>
-      <option>Grandpa</option>
-      <option>Uncle</option>
-      <option>Aunt</option>
-      <option>Cousin</option>
-      <option>Brother</option>
-      <option>Sister</option>
-      <option>Father</option>
-      <option>Mother</option>"
-    ) %>
-    <%= label :query, 'in' %>
-    <%= text_field_tag :query %>
-    <%= submit_tag("Search!") %>
-  <% end %>
-  <%# <% <form class="form-inline" action="/family_members">
-    <label for="relatives">Find </label>
-    <select class="form-control" id="relatives">
-      <option>Relatives</option>
-      <option>Grandmas</option>
-      <option>Grandpas</option>
-      <option>Uncles</option>
-      <option>Aunts</option>
-      <option>Cousins</option>
-      <option>Brothers</option>
-      <option>Sisters</option>
-      Fathers 
-      Mothers
-    </select>
-    <label for>near</label>
-    <input type="text" class="form-control" id="city" placeholder="city" required>
-    <button type="submit" class="btn btn-primary">Search!</button>
-  </form> %> 
+    <%= form_tag family_members_path, method: :get do %>
+    <%= label :kinship, 'Find' %>
+    <%= select_tag :kinship, raw(
+      "<option>Grandma</option>
+        <option>Grandpa</option>
+        <option>Uncle</option>
+        <option>Aunt</option>
+        <option>Cousin</option>
+        <option>Brother</option>
+        <option>Sister</option>
+        <option>Father</option>
+        <option>Mother</option>"
+      ) %>
+      <%= label :query, 'in' %>
+      <%= text_field_tag :query %>
+      <%= submit_tag("Search!") %>
+    <% end %>
+  </div>
 </div>
 
 
 
-  <div class="landing_headers"><h2>Rent the perfect Relative!</h2></div>
+<div class="landing_headers"><h2>Rent the perfect Relative!</h2></div>
 
 <div class="container d-flex flex-column" id="featured-relatives">
   <div class="row justify-content-around">
