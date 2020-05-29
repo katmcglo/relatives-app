@@ -1,63 +1,114 @@
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="https://alecsoth.com/photography/media/pages/projects/last-days-of-w/2189907791-1551319080/2008_04zl0099_f.jpg" data-holder-rendered="true">
-    </div>
-    <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [800x400]" src="https://alecsoth.com/photography/media/pages/projects/sleeping-by-the-mississippi/4043520684-1551319080/2000_04zl0010-f.jpg" data-holder-rendered="true">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Third slide [800x400]" src="https://alecsoth.com/photography/media/pages/projects/niagara/3253179904-1551319080/2005_02zl0061_f.jpg" data-holder-rendered="true">
+<div class="banner-search-bar">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://alecsoth.com/photography/media/pages/projects/sleeping-by-the-mississippi/4043520684-1551319080/2000_04zl0010-f.jpg);">
+    <div class="container">
+      <h1 style="letter-spacing: 1px;">Looking for a Grandma?</h1>
+      <p>Brünhilde's Sauerkraut is unbeatable!</p>
     </div>
   </div>
 </div>
 
-<div class="container d-flex align-items-center justify-content-center" id="homepage-box">
-  <div class="form-group row">
-  <form class="form-inline" action="/family_members">
-    <label for="relatives">Find </label>
-    <select class="form-control" id="relatives">
-      <option>Relatives</option>
-      <option>Grandmas</option>
-      <option>Grandpas</option>
-      <option>Uncles</option>
-      <option>Aunts</option>
-      <option>Cousins</option>
-      <option>Brothers</option>
-      <option>Sisters</option>
-    </select>
-    <label for>near</label>
-    <input type="text" class="form-control" id="city" placeholder="city" required>
-    <button type="submit" class="btn btn-primary">Search!</button>
-  </form>
-</div>
+<div class="search-bar d-flex align-items-center justify-content-center" id="homepage-box" style="z-index: 1; margin-left: 60px;">
+    <div class="form-group row">
+      <form class="form-inline" action="/family_members">
+        <label for="relatives"></label>
+        <select class="form-control" id="relatives">
+          <option>Find a relative</option>
+          <option>Grandmas</option>
+          <option>Grandpas</option>
+          <option>Uncles</option>
+          <option>Aunts</option>
+          <option>Cousins</option>
+          <option>Brothers</option>
+          <option>Sisters</option>
+        </select>
+        <label for></label>
+        <input type="text" class="form-control" id="city" placeholder="around you!" required>
+        <button type="submit" class="btn btn-primary">Search!</button>
+      </form>
+    </div>
+  </div>
 
-</div>
+  <div class="landing_headers"><h2>Rent the perfect Relative!</h2></div>
 
 <div class="container d-flex flex-column" id="featured-relatives">
-<div class="row justify-content-around">
-<div class="card" style="width: 18rem;">
-  <%= image_tag "dad.jpg", class: "card-img-top"%>
-  <div class="card-body">
-    <h5 class="card-title">Excellent Fathers</h5>
-    <p class="card-text">Emotionally available, good at operating a grill, great at jokes! </p>
+  <div class="row justify-content-around">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "dad.jpg", class: "card-img-top"%>
+      <div class="card-body">
+        <h5 class="card-title">Excellent Fathers</h5>
+        <p class="card-text">Emotionally available, good at operating a grill, great at jokes! </p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "grandma.jpg", class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title">Grandmas Who Take No Shit</h5>
+        <p class="card-text">Useless boyfriend? Hair getting too long? Our acerbic Grannies will tell you how it is.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "coolguy.jpg", class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title">Tough Older Siblings</h5>
+        <p class="card-text">Hire one of our menacing teenagers to eradicate your child's bully the old fashioned way.</p>
+      </div>
+    </div>
   </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <%= image_tag "grandma.jpg", class: "card-img-top" %>
-  <div class="card-body">
-    <h5 class="card-title">Grandmas Who Take No Shit</h5>
-    <p class="card-text">Useless boyfriend? Hair getting too long? Our acerbic Grannies will tell you how it is.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <%= image_tag "coolguy.jpg", class: "card-img-top" %>
-  <div class="card-body">
-    <h5 class="card-title">Tough Older Siblings</h5>
-    <p class="card-text">Hire one of our menacing teenagers to eradicate your child's bully the old fashioned way.</p>
-  </div>
-</div>
 </div>
 
+  <div class="landing_headers" id="h2-featured-relatives"><h2>Featured Relatives</h2></div>
+
+
+<div class="container">
+  <div class="row justify-content-around">
+  <div class="featured-cards">
+    <% @relatives.each do |relative| %>
+        <%= link_to family_member_path(relative.id) do %>
+          <div class=" card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://frontiersinblog.files.wordpress.com/2020/04/frontiers-psychology-free-from-dance-alternative-interaction-grandchildren-grandparents.jpg?w=1024)">
+            <%= relative.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="featured-cards">
+    <% @relatives.each do |relative| %>
+        <%= link_to family_member_path(relative.id) do %>
+          <div class=" card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://frontiersinblog.files.wordpress.com/2020/04/frontiers-psychology-free-from-dance-alternative-interaction-grandchildren-grandparents.jpg?w=1024)">
+            <%= relative.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="featured-cards">
+    <% @relatives.each do |relative| %>
+        <%= link_to family_member_path(relative.id) do %>
+          <div class=" card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://frontiersinblog.files.wordpress.com/2020/04/frontiers-psychology-free-from-dance-alternative-interaction-grandchildren-grandparents.jpg?w=1024)">
+            <%= relative.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  </div>
+</div>
+
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide" src="https://alecsoth.com/photography/media/pages/projects/last-days-of-w/2189907791-1551319080/2008_04zl0099_f.jpg" data-holder-rendered="true">
+      </div>
+      <div class="carousel-item active">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide" src="https://alecsoth.com/photography/media/pages/projects/sleeping-by-the-mississippi/4043520684-1551319080/2000_04zl0010-f.jpg" data-holder-rendered="true">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Third slide" src="https://alecsoth.com/photography/media/pages/projects/niagara/3253179904-1551319080/2005_02zl0061_f.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+  </div>
+
+        <% if ! current_user %>
+        <%= link_to "Log in!", user_session_path, method: :post, class: "btn btn-primary" %>
+        <% end %> --!>
 </div>
