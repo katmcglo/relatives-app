@@ -15,13 +15,8 @@ class FamilyMembersController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
-    @family_member = FamilyMember.new(params.require(:family_member).permit(:name, :age, :kinship, :description, :image, :city))
-    authorize @family_member
-=======
     @family_member = FamilyMember.new(family_member_params)
     # authorize @family_member
->>>>>>> 9422e1365eea42ed0a6b03577840493df7355d4f
     @family_member.user = current_user
     if @family_member.save!
       redirect_to family_member_path(@family_member)
