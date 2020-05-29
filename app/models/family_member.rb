@@ -1,7 +1,7 @@
 class FamilyMember < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  validates :name, :age, :description, :kinship, :image, presence: true
+  validates :name, :age, :city, :description, :kinship, :image, presence: true
   include PgSearch::Model
   pg_search_scope :search_by_city,
   against: [ :city ],

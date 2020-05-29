@@ -19,7 +19,7 @@ class FamilyMembersController < ApplicationController
     authorize @family_member
     @family_member.user = current_user
     if @family_member.save!
-      redirect_to root_path
+      redirect_to family_member_path(@family_member)
     else
       render "new"
     end
