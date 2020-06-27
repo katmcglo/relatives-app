@@ -24,7 +24,10 @@
         <option value='Mother'>Mothers</option>"
       ) %>
       <%= label :query, 'in' %>
-      <%= text_field_tag :query %>
+      <%= select_tag :query, raw(
+        "<option value='Munich'>Munich</option>
+        <option value='Berlin'>Berlin</option>"
+      ) %>
       <%= submit_tag("Search!") %>
     <% end %>
   </div>
