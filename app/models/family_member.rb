@@ -2,7 +2,7 @@ class FamilyMember < ApplicationRecord
   belongs_to :user
   has_one_attached :image, dependent: :delete
 
-  validates :name, :age, :city, :description, :kinship, presence: true
+  validates :name, :age, :city, :kinship, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_city,
