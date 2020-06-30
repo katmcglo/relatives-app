@@ -6,10 +6,8 @@ class FamilyMembersController < ApplicationController
       @family_members = FamilyMember.search_by_city(params[:query]).search_by_kinship(params[:kinship])
     elsif params[:description].present?
       @family_members = FamilyMember.where("description ILIKE ?", "%#{params[:description]}")
-      #  search_by_description(params[:description])
     else
       @family_members = FamilyMember.order.(created_at: :desc).search_by_kinship(params[:kinship])
-
     end
   end
 

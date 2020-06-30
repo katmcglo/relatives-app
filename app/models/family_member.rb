@@ -14,6 +14,4 @@ class FamilyMember < ApplicationRecord
   pg_search_scope :search_by_description, 
   against: [ :description ], 
   using: [ :tsearch]
-  pg_search_scope :search_by_age,
-  against: [ :age ]
 end
