@@ -26,7 +26,7 @@ grandma_one_img = URI.open("https://alecsoth.com/photography/media/pages/project
 grandma_one = FamilyMember.new(
     name: "Brünhilde Meier",
     age: 87,
-    description: "",
+    description: "A tough old goat, but with a loving heart.",
     kinship: "Grandma",
     user: dareos,
     city: "Munich",
@@ -39,7 +39,7 @@ grandma_two_img = URI.open("https://alecsoth.com/photography/media/pages/project
 grandma_two = FamilyMember.new(
     name: "Stefanie Blue",
     age: 93,
-    description: "",
+    description: "Will melt even the toughest of hearts",
     kinship: "Grandma",
     user: dareos,
     city: "Berlin",

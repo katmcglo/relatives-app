@@ -3,7 +3,10 @@ class PagesController < ApplicationController
     @featured_relatives = FamilyMember.where(featured: true)
   end
 
-  def toughgrandma
-    @grandmas = FamilyMember.where("description ILIKE ?", "%tough%" )
+  def show
+    
+    render template: "pages/#{params[:page]}"
   end
+
+  
 end
