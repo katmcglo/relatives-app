@@ -12,5 +12,6 @@ class FamilyMember < ApplicationRecord
   pg_search_scope :search_by_kinship,
   against: [ :kinship ]
   pg_search_scope :search_by_description, 
-  against: [ :description ]
+  against: [ :description ], 
+  using: [ :tsearch]
 end
