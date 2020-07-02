@@ -26,7 +26,7 @@ grandma_one_img = URI.open("https://alecsoth.com/photography/media/pages/project
 grandma_one = FamilyMember.new(
     name: "Brünhilde Meier",
     age: 87,
-    description: "A tough old goat, but with a loving heart.",
+    description: "A tough old goat, but with a loving heart. Famed for her crunchy homemade sauerkraut.",
     kinship: "Grandma",
     user: dareos,
     city: "Munich",
@@ -39,7 +39,7 @@ grandma_two_img = URI.open("https://alecsoth.com/photography/media/pages/project
 grandma_two = FamilyMember.new(
     name: "Stefanie Blue",
     age: 93,
-    description: "Will melt even the toughest of hearts",
+    description: "Knitting savant. Great at life advice. Will melt even the toughest of hearts",
     kinship: "Grandma",
     user: dareos,
     city: "Berlin",
@@ -51,7 +51,7 @@ grandma_three_img = URI.open("https://alecsoth.com/photography/media/pages/proje
 grandma_three = FamilyMember.new(
     name: "Gloria Parker",
     age: 101,
-    description: "",
+    description: "Persnickety old thing, will destroy you at Scrabble. Has 28 grandchildren already but there's always room for one more.",
     kinship: "Grandma",
     user: dareos,
     city: "Munich",
@@ -63,7 +63,7 @@ grandma_four_img = URI.open("https://alecsoth.com/photography/media/pages/projec
 grandma_four = FamilyMember.new(
     name: "Jisoo Chan",
     age: 69,
-    description: "",
+    description: "Funky art grandma with a house full of treasures.",
     kinship: "Grandma",
     user: dareos,
     city: "Berlin",
@@ -75,8 +75,8 @@ grandma_four.save!
 grandma_five_img = URI.open("https://alecsoth.com/photography/media/pages/projects/songbook/3936459883-1551319080/11-2013_05md1001-816-bf-copy.jpg")
 grandma_five = FamilyMember.new(
     name: "Clara Higgins",
-    age: 69,
-    description: "",
+    age: 85,
+    description: "Mysterious, rich grandma. Cupboards full of Royal Doulton and Givenchy. Will teach you about the stock market and regale you with tales of her youth.",
     kinship: "Grandma",
     user: dareos,
     city: "Munich",
@@ -91,7 +91,7 @@ father_one_img = URI.open("https://alecsoth.com/photography/media/pages/projects
 father_one = FamilyMember.new(
     name: "Marco Timón",
     age: 52,
-    description: "",
+    description: "A loving, excellent father. Good at grilling hamburgers, good at making Dad jokes. Will try and one up your whilst talking about his children's achievements.",
     kinship: "Father",
     user: dareos,
     city: "Munich",
@@ -104,7 +104,7 @@ father_two_img = URI.open("https://alecsoth.com/photography/media/pages/projects
 father_two = FamilyMember.new(
     name: "Humberto Pattison",
     age: 56,
-    description: "",
+    description: "Yoga dad. Rides a bike everywhere and spent a lot of time in Chiang Mai trying to find investors for his start up, 'Psyndr', a dating app for psytrance enthusiasts. Now works at an organic co-op and is getting really into Ecstatic Dance.",
     kinship: "Father",
     user: dareos,
     city: "Berlin",
@@ -117,7 +117,7 @@ father_three_img = URI.open("https://alecsoth.com/photography/media/pages/projec
 father_three = FamilyMember.new(
     name: "Haralambos Katsoulis",
     age: 56,
-    description: "",
+    description: "Haralambos is a great dad and an even better cook. His casseroles are excellent. Make sure you're hungry if you're going to hire him!",
     kinship: "Father",
     user: dareos,
     city: "Munich",
