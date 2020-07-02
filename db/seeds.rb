@@ -91,7 +91,7 @@ father_one_img = URI.open("https://alecsoth.com/photography/media/pages/projects
 father_one = FamilyMember.new(
     name: "Marco Timón",
     age: 52,
-    description: "",
+    description: "A loving, excellent father. Good at grilling hamburgers, good at making Dad jokes. Will try and one up your whilst talking about his children's achievements.",
     kinship: "Father",
     user: dareos,
     city: "Munich",
@@ -104,7 +104,7 @@ father_two_img = URI.open("https://alecsoth.com/photography/media/pages/projects
 father_two = FamilyMember.new(
     name: "Humberto Pattison",
     age: 56,
-    description: "",
+    description: "Yoga dad. Rides a bike everywhere and spent a lot of time in Chiang Mai trying to find investors for his start up, 'Psyndr', a dating app for psytrance enthusiasts. Now works at an organic co-op and is getting really into Ecstatic Dance.",
     kinship: "Father",
     user: dareos,
     city: "Berlin",
@@ -117,7 +117,7 @@ father_three_img = URI.open("https://alecsoth.com/photography/media/pages/projec
 father_three = FamilyMember.new(
     name: "Haralambos Katsoulis",
     age: 56,
-    description: "",
+    description: "Haralambos is a great dad and an even better cook. His casseroles are excellent. Make sure you're hungry if you're going to hire him!",
     kinship: "Father",
     user: dareos,
     city: "Munich",
